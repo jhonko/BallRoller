@@ -9,11 +9,6 @@ public class InGameMenuHandeller : MonoBehaviour {
 
     public void SwitchMenu()
     {
-       
-        
-     
-        //GameObject MenuGO = GameObject.FindGameObjectWithTag("InGameMenu");
-
         if (inGameMenu.activeSelf == false) {
             inGameMenu.SetActive(true);            
         } else {

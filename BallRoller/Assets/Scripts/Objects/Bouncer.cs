@@ -36,10 +36,7 @@ public class Bouncer : MonoBehaviour {
             newDirection.z = -playerRB.velocity.z;
             newDirection.x = -playerRB.velocity.x;
 
-          //  Debug.Log(playerRB.velocity + "player velocity");
-           // Debug.Log(newDirection + "new direction");
             playerRB.AddForce(newDirection * speedModifier, ForceMode.VelocityChange);
-
         }
     }
 

@@ -11,45 +11,19 @@ public class HighScoreHandeller : MonoBehaviour {
     public int levelMaxCoins;
     public int levelPickedUpCoins;
 
-    // public static HighScoreHandeller hSH;
-
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
 
-    public void update()
-    {
-        // public Text levelTimeText;
-    }
-
-    /* void MakeThisTheOnlyHighScoreHandeller()
-     {
-         if (hSH == null)
-         {
-             DontDestroyOnLoad(gameObject);
-             hSH = this;
-         }
-         else
-         {
-             if (hSH != this)
-             {
-                 Destroy(gameObject);
-             }
-         }
-     }*/
-
     public void SetLevelCounter(float counter)
     {
-
         levelCounter = counter;
-        //Debug.Log("levelCounter " + levelCounter );
     }
 
     public void SetLevelTime(float time)
     {
         levelTime = time;
-        Debug.Log("levelTime " + levelTime);
     }
 
     public void SetLevelCoins(int maxCoins, int pickedUpCoins)

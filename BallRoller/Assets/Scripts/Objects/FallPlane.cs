@@ -17,7 +17,6 @@ public class FallPlane : MonoBehaviour {
         {
             fallPlaneLight.SetActive(true);
             StartCoroutine("WaitForDestroy");
-
         }
     }
 
@@ -27,14 +26,11 @@ public class FallPlane : MonoBehaviour {
         fallPlaneSound.Play();
         fallPlane.SetActive(false);
         StartCoroutine("WaitForActivate");
-      
-        // Destroy(this.gameObject);
     }
 
     IEnumerator WaitForActivate()
     {
         yield return new WaitForSeconds(delay);
         fallPlane.SetActive(true);
-        // Destroy(this.gameObject);
     }
 }

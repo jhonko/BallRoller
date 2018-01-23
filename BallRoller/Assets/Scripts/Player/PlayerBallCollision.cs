@@ -9,21 +9,6 @@ public class PlayerBallCollision : MonoBehaviour {
 
     public PlayerBallSpawner playerBallSpawner;
 
-   
-
-
-    // Use this for initialization
-    void Start () {
-        
-
-        // GameObject sceneHandellerGO = GameObject.FindGameObjectWithTag("SceneHandellerGO");
-        //sceneHandellerScript = sceneHandellerGO.GetComponent("SceneHandeller") as SceneHandeller;
-        // sceneHandellerGO = GameObject.FindObjectOfType(typeof(SceneHandeller)) as SceneHandeller;
-
-
-    }
-	
-	// Update is called once per frame
 	void Update () {
 		
 	}
@@ -35,7 +20,6 @@ public class PlayerBallCollision : MonoBehaviour {
             Debug.Log("dood jonge" +  this.transform.position);
             playerBallSpawner.Respawn();
             Destroy(this.gameObject);
-            //sceneHandellerScript.RestartScene();
         }
     }
 }

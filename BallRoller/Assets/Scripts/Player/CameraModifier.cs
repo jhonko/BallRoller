@@ -8,17 +8,14 @@ public class CameraModifier : MonoBehaviour {
 
     public Vector3 offset;
 
-    // Use this for initialization
     void Start () {
         playerGO = GameObject.FindGameObjectWithTag("Player");
 
     }
-	
-	// Update is called once per frame
+
 	void Update () {
         if (playerGO != null)
         {
-           // Debug.Log(playerGO);
             transform.position = playerGO.transform.position + offset;
         }
         else

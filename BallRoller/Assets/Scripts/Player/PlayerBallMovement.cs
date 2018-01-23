@@ -4,20 +4,6 @@ using UnityEngine;
 
 public class PlayerBallMovement : MonoBehaviour {
 
-    /* 
-
-     bool upArrow = false;
-     bool pushedUpArrow = false;
-     bool downArrow = false;
-     bool pushedDownArrow = false;
-     bool leftArrow = false;
-     bool pushedLeftArrow = false;
-     bool rightArrow = false;
-     bool pushedRightArrow = false;
-
-     
-     private float accelerationForce;*/
-
     public float maxAccelerationForce;
     public float acceleration;
     private float accelerationForce;
@@ -78,44 +64,6 @@ public class PlayerBallMovement : MonoBehaviour {
             jumpDone = false;
         }
 
-        //down arrow
-        /*  if (Input.GetKeyDown(KeyCode.DownArrow))
-          {
-              downArrow = true;
-
-          }
-          if (Input.GetKeyUp(KeyCode.DownArrow))
-          {
-              downArrow = false;
-
-          }
-          //uparrow
-          if (Input.GetKeyDown(KeyCode.UpArrow))
-          {
-              upArrow = true;
-          }
-          if (Input.GetKeyUp(KeyCode.UpArrow))
-          {
-              upArrow = false;
-          }
-          //leftarrow
-          if (Input.GetKeyDown(KeyCode.LeftArrow))
-          {
-              leftArrow = true;
-          }
-          if (Input.GetKeyUp(KeyCode.LeftArrow))
-          {
-              leftArrow = false;
-          }
-          //rightarrow
-          if (Input.GetKeyDown(KeyCode.RightArrow))
-          {
-              rightArrow = true;
-          }
-          if (Input.GetKeyUp(KeyCode.RightArrow))
-          {
-              rightArrow = false;
-          }*/
     }
 
     void ApplyForce()
@@ -142,50 +90,6 @@ public class PlayerBallMovement : MonoBehaviour {
             thisGO = GameObject.FindGameObjectWithTag("Player");
             thisRB = thisGO.GetComponent<Rigidbody>();
         }
-
-        
-
-        
-
-        /*
-        if (upArrow == true)
-        {
-
-            thisRB.AddTorque(new Vector3(1, 0,0 ) * maxAccelerationForce);
-            //pushedUpArrow = true;
-        }
-        if (upArrow == false && pushedUpArrow == true)
-        {
-            if (thisRB.velocity.z > 0)
-            {
-                thisRB.AddTorque(new Vector3(-1, 0, 0) * maxAccelerationForce / 10);
-            }
-            else
-            {
-                thisRB.velocity = new Vector3(0,0,0);
-                pushedUpArrow = false;
-            }
-        }
-        
-        if (downArrow == true)
-        {
-            thisRB.AddTorque(new Vector3(-1, 0, 0 ) * maxAccelerationForce);
-        }
-        if (downArrow == false && pushedDownArrow == true)
-        {
-            thisRB.AddTorque(new Vector3(1, 0, 0) * maxAccelerationForce);
-        }
-
-        if (rightArrow == true)
-        {
-            thisRB.AddTorque(new Vector3( 0, 0, -1) * maxAccelerationForce);
-        }
-
-        if (leftArrow == true)
-        {
-            thisRB.AddTorque(new Vector3(0, 0, 1) * maxAccelerationForce);
-        }
-        */
     }
 
     IEnumerator WaitForJump()

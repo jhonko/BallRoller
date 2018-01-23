@@ -27,7 +27,6 @@ public class UIHandeller : MonoBehaviour {
 
     private LevelTimer levelTimerGO;
 
-    // Use this for initialization
     void Start () {
         if (finishedLevelScene == true)
         {
@@ -45,9 +44,7 @@ public class UIHandeller : MonoBehaviour {
         }
     }
 	
-	// Update is called once per frame
 	void FixedUpdate () {
-        //Debug.Log(levelCounter);    
         if (inGameScene == true)
         {
             SetCurrentTime();
@@ -57,8 +54,7 @@ public class UIHandeller : MonoBehaviour {
     public void SetLastLevelText()
     {
         GetLastLevel();
-        lastLevelText.text = ("Level: " +(float)lastLevel).ToString();
-        
+        lastLevelText.text = ("Level: " +(float)lastLevel).ToString(); 
     }
 
     public void SetLastLevelTimeText()
@@ -89,7 +85,6 @@ public class UIHandeller : MonoBehaviour {
     public void GetLastLevel()
     {
         GetHighScoreHandeller();
-       // highScoreHandellerGO.GetLevelCounter();
         lastLevel = highScoreHandellerGO.GetLevelCounter();
     }
 

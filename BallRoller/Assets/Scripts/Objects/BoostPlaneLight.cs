@@ -13,8 +13,6 @@ public class BoostPlaneLight : MonoBehaviour
     {
         maxLightCounter = lightsArray.Length;
         StartLights();
-
-        
     }
 
     void StartLights()
@@ -23,21 +21,17 @@ public class BoostPlaneLight : MonoBehaviour
         {
             lightCounter = 0;
         }
-    //    Debug.Log(lightCounter);
         lightsArray[lightCounter].SetActive(true);
         lightCounter++;
         StartCoroutine("WaitForSwitchOff");
-
     }
 
     IEnumerator WaitForSwitchOff()
     {
-       // Debug.Log("OFF");
         int thisOffCounter;
         thisOffCounter = lightCounter -1;
         StartCoroutine("WaitForSwitchOn");
         yield return new WaitForSeconds(0.4f);
-       // Debug.Log(lightsArray[thisOffCounter]);
         lightsArray[thisOffCounter].SetActive(false);
         
 
@@ -45,12 +39,8 @@ public class BoostPlaneLight : MonoBehaviour
 
     IEnumerator WaitForSwitchOn()
     {
-      //  Debug.Log("ON");
-
         yield return new WaitForSeconds(0.1f);
         StartLights();
-
-
     }
 
 }
