@@ -22,6 +22,7 @@ public class UIHandeller : MonoBehaviour {
 
     public Text activeTimerText;
     private float activeTimer;
+    private float roundedActiveTimer;
 
     private HighScoreHandeller highScoreHandellerGO;
 
@@ -45,6 +46,7 @@ public class UIHandeller : MonoBehaviour {
     }
 	
 	void FixedUpdate () {
+        Debug.Log("inGamscene = " + inGameScene);
         if (inGameScene == true)
         {
             SetCurrentTime();
@@ -71,8 +73,10 @@ public class UIHandeller : MonoBehaviour {
 
     public void SetCurrentTime()
     {
+        
         GetCurrentTime();
-        activeTimerText.text = ("Time: "+(float)activeTimer).ToString();
+        roundedActiveTimer = Mathf.Round(activeTimer * 100f) / 100f;
+        activeTimerText.text = ("Time: "+(float)roundedActiveTimer).ToString();
     }
 
     public void GetCurrentTime()
